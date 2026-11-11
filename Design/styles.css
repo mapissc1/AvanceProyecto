@@ -1,0 +1,398 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dcdbdb;
+    color: #333;
+}
+
+
+
+.encabezado {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.encabezado h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    font-size: 16px;
+}
+
+
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bienvenida h2 {
+    color: #000000;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.bienvenida p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+
+.seleccion-usuario h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.tarjetas-roles {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.tarjeta {
+    background-color: white;
+    flex: 1;
+    min-width: 220px;
+    max-width: 320px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    color: #0d0d0d;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+.tarjeta a {
+    display: inline-block;
+    background-color: #fdfdd6;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+
+
+
+.pie-pagina {
+    background-color: #292929;
+    color: white;
+    padding: 40px 8% 15px;
+    margin-top: 50px;
+}
+
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+
+
+.footer-columna {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-columna h2 {
+    color: #fff9a8;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.footer-columna h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #fff9a8;
+}
+
+.footer-columna p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    color: #dddddd;
+}
+
+
+
+
+
+
+
+.footer-inferior {
+    border-top: 1px solid #555;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.footer-inferior p {
+    color: #bbbbbb;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+
+
+.encabezado {
+    position: relative;
+}
+
+.logo-uniminuto {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 300px;
+    height: 100px;
+
+    object-fit: contain;
+}
+
+
+.icono-emoji {
+    font-size: 38px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/* cont login */
+
+.formulario-login {
+    background-color: white;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+/* titulo */
+
+.formulario-login h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formulario-login > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* campos */
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.campo-formulario input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* boton */
+
+.boton-login {
+    width: 100%;
+    padding: 13px;
+    background-color: #ffeea1;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-login:hover {
+    background-color: #fbffab;
+}
+
+/* registro */
+
+.enlace-registro {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.enlace-registro a {
+    color: #9a0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* inicio de sesion */
+
+.volver-inicio {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #555;
+    text-decoration: none;
+}
+
+
+
+#mensaje-error {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* regresar y cerrar sesion */
+
+.boton-regresar {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #170396;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton-regresar:hover {
+    background-color: #555;
+}
+
+#mensaje-error:empty {
+    display: none;
+}
+
+/* form registro */
+
+.formulario-registro {
+    background-color: white;
+    width: 100%;
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.formulario-registro h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.formulario-registro > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* campos registro */
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+/* boton registro */
+
+.formulario-registro .boton-login {
+    margin-top: 10px;
+}
+
+/* MENSAJE DEL REGISTRO */
+
+#mensaje-registro {
+    color: #eaff95;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#mensaje-registro:empty {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .logo-uniminuto {
+        position: static;
+        transform: none;
+        display: block;
+        width: 180px;
+        height: auto;
+        margin: 0 auto 15px;
+    }
+
+    .encabezado {
+        padding: 20px 15px;
+    }
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    .formulario-registro {
+        padding: 25px 20px;
+    }
+
+}

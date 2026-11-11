@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-rol-requerido="estudiante">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Estudiante UNIMINUTO</title>
+    <title>Panel del estudiante | ProfeDisponible</title>
 
-    <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="../Design/styles.css">
+    <script src="../Control/sesion.js" defer></script>
 </head>
 
 <body>
-    <header class="encabezado">
-        <img src="logo-uniminuto.jpeg" alt="Logo UNIMINUTO" class="logo-uniminuto">
+<img src="../Design/logo-uniminuto.jpeg"
+     alt="Logo UNIMINUTO"
+     class="logo-uniminuto">
        
        
         <h1>ESTUDIANTE </h1>
@@ -35,31 +37,40 @@
                     <div class="icono-emoji">📅</div>
                     <h3>Consultar disponibilidad</h3>
                     <p> Consulta los horarios disponibles de tus profesores para agendar asesorías. </p>
-                    <a href="consultar.html"> Consultar disponibilidad</a>
+                    <a href="#"> Consultar disponibilidad</a>
                 </article>
 
                 <article class="tarjeta">
                     <div class="icono-emoji">📝</div>
                     <h3>Solicitar asesoría</h3>
                     <p> Solicita una asesoría académica con tus profesores según su disponibilidad. </p>
-                    <a href="solicitar.html"> Solicitar asesoría</a>
+                    <a href="#"> Solicitar asesoría</a>
                 </article>
 
                 <article class="tarjeta">
                     <div class="icono-emoji">📊</div>
                     <h3>Ver historial de asesorías</h3>
                     <p> Revisa el historial de tus asesorías pasadas y próximas. </p>
-                    <a href="historial.html"> Ver historial de asesorías</a>
+                    <a href="#"> Ver historial de asesorías</a>
                 </article>
+
+            </div>
         </section>
-
-
-
-
-
-
-
+        <a href="#" id="cerrar-sesion" class="boton-regresar">Cerrar sesión</a>
 
     </main>
+
+    <footer class="pie-pagina">
+        <p>2024 ProfeDisponible</p>
+        <p> Plataforma de gestión de asesorías académicas UNIMINUTO</p>
+
+    </footer>
+
+
+
+
+</body>
+
+   
 
 </html>

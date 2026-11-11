@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | ProfeDisponible</title>
+
+    <!-- Conexión con el archivo CSS -->
+    <link rel="stylesheet" href="../Design/styles.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <img src="../Design/logo-uniminuto.jpeg"
+             alt="Logo UNIMINUTO"
+             class="logo-uniminuto">
+
+        <h1>ProfeDisponible</h1>
+        <p>Acceso a la plataforma</p>
+
+    </header>
+
+    <main class="contenedor">
+
+        <section class="formulario-login">
+
+            <h2>Iniciar sesión</h2>
+
+            <p id="mensaje-bienvenida">
+                Por favor, ingresa tus credenciales para acceder a tu panel.
+            </p>
+
+            <form id="formulario-login">
+
+                <div class="campo-formulario">
+
+                    <label for="usuario">Usuario</label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Ingresa tu usuario"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo-formulario">
+
+                    <label for="contrasena">Contraseña</label>
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Ingresa tu contraseña"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="boton-login">
+                    Iniciar sesión
+                </button>
+
+                <p id="mensaje-error"></p>
+
+            </form>
+
+            <!-- REGISTRO -->
+            <div class="enlace-registro">
+
+                <p>¿No tienes una cuenta?</p>
+
+                <a href="registro.html">Regístrate aquí</a>
+
+            </div>
+
+            <a href="index.html" class="boton-regresar">
+                Regresar al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+   
+    <footer class="pie-pagina">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+
+                <h2>ProfeDisponible</h2>
+
+                <p>
+                    Plataforma web para consultar la disponibilidad
+                    de profesores y solicitar asesorías académicas.
+                </p>
+
+            </div>
+
+            <div class="footer-columna">
+
+                <h3>Información</h3>
+
+                <p>Proyecto académico</p>
+                <p>Desarrollo de Software</p>
+                <p>UNIMINUTO</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+
+            <p>2026 ProfeDisponible. Todos los derechos reservados.</p>
+
+            <p>Plataforma de apoyo académico</p>
+
+        </div>
+
+    </footer>
+
+  
+<script src="../Informacion/usuarios.js"></script>
+<script src="../Control/login.js"></script>
+
+    <script src="../Informacion/usuarios.js"></script>
+    <script src="../Control/seguridad.js"></script>
+    <script src="../Control/sesion.js"></script>
+    <script src="../Control/login.js"></script>
+
+</body>
+</html>

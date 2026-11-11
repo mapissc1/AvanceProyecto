@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Registro | ProfeDisponible</title>
+
+        <link rel="stylesheet" href="../Design/styles.css">
+      
+
+    </head>
+<body>
+
+<header class="encabezado">
+
+    <img src="../Design/logo-uniminuto.jpeg"
+         alt="Logo UNIMINUTO"
+         class="logo-uniminuto">
+
+    <h1>ProfeDisponible</h1>
+    <p>Registro de usuario</p>
+
+</header>
+        <main class="contenedor">
+            <section class="formulario-registro">
+                <h2>Registro de usuario</h2>
+    
+        <form id="formulario-registro">
+            <div class="campo-formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+
+
+             <div class="campo-formulario">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo"placeholder="Ingresa tu correo electrónico" required>
+
+            <div class="campo-formulario">
+            <label for="usuario">Nombre deUsuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu nombre de usuario" required>
+            </div>
+
+            <div class="campo-formulario">
+            <label for="rol">Tipo de usuario</label>
+            <select id="rol" name="rol" required>
+                <option value="">Selecciona tu rol</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="profesor">Profesor</option>
+            </select>
+
+            </div>
+
+            <div class="campo-formulario">
+             <label for="confirmar-contrasena">Confirmar contraseña</label>
+                <input  type="password"  id="confirmar-contrasena" name="confirmar-contrasena" placeholder="Repite tu contraseña"required>
+
+            </div>
+
+            <button type="submit" class="boton-login">Registrarse</button>   
+            <p id="mensaje-registro"></p>
+
+        </form>
+
+    
+<div class="enlace-registro">
+                <p>¿Ya tienes una cuenta?</p>
+                <a href="login.html">Inicia sesión aquí</a>
+            </div>
+
+            <a href="index.html" class="boton-regresar">
+                Regresar al inicio
+            </a>
+
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>ProfeDisponible</p>
+        <p>Plataforma de gestión de asesorías académicas UNIMINUTO</p>
+    </footer>
+
+</body>
+</html>
