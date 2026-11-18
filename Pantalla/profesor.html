@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-rol-requerido="profesor">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,6 @@
     <link rel="stylesheet" href="../Design/styles.css">
 
    
-    <script src="../Control/sesion.js" defer></script>
 </head>
 
 <body>
@@ -49,20 +49,21 @@
 
                 <p>Consulta las solicitudes de asesorías académicas de tus estudiantes. </p>
            
-                <a href="#">Consultar solicitudes</a>
+                <a href="#solicitudes">Consultar solicitudes</a>
             </article>
 
 
             <article class="tarjeta">
                 <div class="icono-emoji">📅</div>
 
-                <h3>Publicar <html></html>orarios</h3>
+                <h3>Publicar horarios</h3>
+                
 
                 <p>Publica tus horarios disponibles para que los estudiantes puedan agendar asesorías contigo. 
 
                 </p>
 
-                <a href="#">Publicar disponibilidad</a>
+                <a href="#publicar">Publicar disponibilidad</a>
 
             </article>
 
@@ -71,26 +72,71 @@
 
                 <h3>Ver Horarios</h3>
                 <p>Consulta los horarios disponibles para agendar asesorías con tus estudiantes.</p>
-                <a href="#">Ver horarios</a>
+                <a href="#mishorarios">Ver horarios</a>
             </article>
 
         </div>
 
          </section>
 
-       
-            <a href="#" id="cerrar-sesion" class="boton-regresar">Cerrar sesión</a>
-        
+        <p id="mensaje-panel" class="mensaje-panel" role="status" aria-live="polite"></p>
+
+        <section id="publicar" class="panel-seccion">
+            <h2>Publicar disponibilidad semanal</h2>
+            <div id="mensaje-panel" role="status" aria-live="polite"></div>
+            <p class="texto-ayuda">El horario se repetirá cada semana hasta que lo desactives.</p>
+            <form id="formulario-disponibilidad" class="formulario-panel">
+                <div class="campo-formulario">
+                    <label for="dia-semana">Día de la semana</label>
+                    <select id="dia-semana" required>
+                        <option value="1">Lunes</option>
+                        <option value="2">Martes</option>
+                        <option value="3">Miércoles</option>
+                        <option value="4">Jueves</option>
+                        <option value="5">Viernes</option>
+                        <option value="6">Sábado</option>
+                        <option value="7">Domingo</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="hora-inicio">Hora de inicio</label>
+                    <input type="time" id="hora-inicio" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="hora-fin">Hora de fin</label>
+                    <input type="time" id="hora-fin" required>
+                </div>
+                <button type="submit">Publicar horario</button>
+            </form>
+        </section>
+
+        <section id="mis-horarios" class="panel-seccion">
+            <h2>Mis horarios publicados</h2>
+            <div id="lista-disponibilidades" class="lista-registros"></div>
+        </section>
+
+        <section id="solicitudes" class="panel-seccion">
+            <h2>Solicitudes de asesoría</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr><th>Fecha y hora</th><th>Estudiante</th><th>Asignatura</th><th>Mensaje</th><th>Estado</th><th>Acción</th></tr>
+                    </thead>
+                    <tbody id="tabla-solicitudes"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <a href="#" id="cerrar-sesion" class="boton-regresar">Cerrar sesión</a>
     </main>
 
     <footer class="pie-pagina">
-        <p> ProfeDisponible</p>
-        <p> Plataforma de gestión de asesorías académicas UNIMINUTO</p>
+        <p>ProfeDisponible</p>
+        <p>Plataforma de gestión de asesorías académicas UNIMINUTO</p>
     </footer>
 
+    <script src="../Control/sesion.js" defer></script>    
+    <script src="../Control/panel.js" defer></script>
 </body>
-
 </html>
 
-
-   

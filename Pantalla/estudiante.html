@@ -7,70 +7,194 @@
 
     <title>Panel del estudiante | ProfeDisponible</title>
 
-
     <link rel="stylesheet" href="../Design/styles.css">
-    <script src="../Control/sesion.js" defer></script>
+
 </head>
 
 <body>
-<img src="../Design/logo-uniminuto.jpeg"
-     alt="Logo UNIMINUTO"
-     class="logo-uniminuto">
-       
-       
-        <h1>ESTUDIANTE </h1>
-        <p> Panel del estudiante</p>
+
+    <header class="encabezado">
+
+        <img src="../Design/logo-uniminuto.jpeg"
+             alt="Logo UNIMINUTO"
+             class="logo-uniminuto">
+
+        <h1>ESTUDIANTE</h1>
+        <p>Panel del estudiante</p>
+
     </header>
 
-
     <main class="contenedor">
+
         <section class="bienvenida">
-            <h2>¡Bienvenido al panel del estudiante!</h2>
-            <p> Aquí podrás consultar la disponibilidad de tus profesores y solicitar asesorías académicas fácilmente. </p>
+            <h2>¡Bienvenido a ProfeDisponible!</h2>
+            <p>
+                Encuentra horarios disponibles, solicita asesorías
+                y consulta el estado de tus solicitudes académicas.
+            </p>
         </section>
 
         <section class="seleccion-usuario">
+
             <h2>Opciones disponibles</h2>
 
             <div class="tarjetas-roles">
+
                 <article class="tarjeta">
                     <div class="icono-emoji">📅</div>
                     <h3>Consultar disponibilidad</h3>
-                    <p> Consulta los horarios disponibles de tus profesores para agendar asesorías. </p>
-                    <a href="#"> Consultar disponibilidad</a>
+                    <p>
+                        Consulta los horarios disponibles de tus
+                        profesores para agendar asesorías.
+                    </p>
+                    <a href="#disponibilidades">
+                        Consultar disponibilidad
+                    </a>
                 </article>
 
                 <article class="tarjeta">
                     <div class="icono-emoji">📝</div>
                     <h3>Solicitar asesoría</h3>
-                    <p> Solicita una asesoría académica con tus profesores según su disponibilidad. </p>
-                    <a href="#"> Solicitar asesoría</a>
+                    <p>
+                        Solicita una asesoría académica con tus
+                        profesores según su disponibilidad.
+                    </p>
+                    <a href="#solicitar">
+                        Solicitar asesoría
+                    </a>
                 </article>
 
                 <article class="tarjeta">
                     <div class="icono-emoji">📊</div>
                     <h3>Ver historial de asesorías</h3>
-                    <p> Revisa el historial de tus asesorías pasadas y próximas. </p>
-                    <a href="#"> Ver historial de asesorías</a>
+                    <p>
+                        Revisa el historial de tus asesorías
+                        pasadas y próximas.
+                    </p>
+                    <a href="#historial">
+                        Ver historial
+                    </a>
                 </article>
 
             </div>
+
         </section>
-        <a href="#" id="cerrar-sesion" class="boton-regresar">Cerrar sesión</a>
+
+        <p id="mensaje-panel" class="mensaje-panel"
+           role="status" aria-live="polite"></p>
+
+        <section id="disponibilidades" class="panel-seccion">
+
+            <h2>Horarios disponibles</h2>
+
+            <p class="texto-ayuda">
+                Consulta los horarios publicados por tus profesores.
+            </p>
+
+            <div id="lista-disponibilidades"
+                 class="lista-registros"></div>
+
+        </section>
+
+        <section id="solicitar" class="panel-seccion">
+
+            <h2>Solicitar asesoría</h2>
+
+            <form id="formulario-solicitud" class="formulario-panel">
+
+                <div class="campo-formulario">
+                    <label for="disponibilidad">
+                        Profesor y horario
+                    </label>
+
+                    <select id="disponibilidad" required>
+                        <option value="">
+                            Selecciona un horario disponible
+                        </option>
+                    </select>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="hora-inicio">Hora de inicio</label>
+                    <input type="time" id="hora-inicio" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="duracion">Duración</label>
+
+                    <select id="duracion" required>
+                        <option value="30">30 minutos</option>
+                        <option value="60">60 minutos</option>
+                    </select>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="asignatura">Asignatura o tema</label>
+                    <input type="text" id="asignatura"
+                           maxlength="120" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje (opcional)</label>
+
+                    <textarea id="mensaje" rows="3"
+                        maxlength="1000"
+                        placeholder="Cuéntale al profesor qué necesitas revisar">
+                    </textarea>
+                </div>
+
+                <button type="submit" class="boton-login">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </section>
+
+        <section id="historial" class="panel-seccion">
+
+            <h2>Mis asesorías</h2>
+
+            <div class="tabla-contenedor">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha y hora</th>
+                            <th>Profesor</th>
+                            <th>Asignatura</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-solicitudes"></tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <a href="#" id="cerrar-sesion"
+           class="boton-regresar">
+            Cerrar sesión
+        </a>
 
     </main>
 
     <footer class="pie-pagina">
-        <p>2024 ProfeDisponible</p>
-        <p> Plataforma de gestión de asesorías académicas UNIMINUTO</p>
-
+        <p>ProfeDisponible</p>
+        <p>
+            Plataforma de gestión de asesorías académicas UNIMINUTO
+        </p>
     </footer>
-
-
-
+      <script src="../Control/sesion.js" defer></script>
+    <script src="../Control/panel.js" defer></script>
 
 </body>
-
-   
-
 </html>
